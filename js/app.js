@@ -27,8 +27,8 @@ document.body.appendChild( renderer.domElement );
 
 // Create a Cube Mesh with basic material
 var geometry = new THREE.BoxGeometry( 1, 1, 1 );
-var material = new THREE.LineBasicMaterial( { color: "#433F81", linewidth: 2 } );
-var cube = new THREE.LineSegments( new THREE.EdgesGeometry(geometry), material );
+var material = new THREE.MeshBasicMaterial( { color: "#433F81", wireframe:true, transparent:true } );
+var cube = new THREE.Mesh( geometry, material );
 
 // Add cube to Scene
 scene.add( cube );
